@@ -1,0 +1,11 @@
+#adding ignore files
+report/
+logs/automation.log
+# ignore all .a files
+*.e
+*.s
+
+target/
+user//logs/automation.log
+
+
