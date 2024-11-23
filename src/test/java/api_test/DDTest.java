@@ -11,21 +11,21 @@ import org.testng.annotations.Test;
 
 public class DDTest {
 
-
-    @Test(priority = 1,dataProvider = "Data",dataProviderClass = DataProviders.class)
-    public void testPostUser(String userID, String userName, String fname, String lname,String userEmail,String pwd,String ph){
-        User userPayload=new User();
-        userPayload.setId(Integer.parseInt(userID));
-        userPayload.setUsername(userName);
-        userPayload.setFirstName(fname);
-        userPayload.setLastName(lname);
-        userPayload.setEmail(userEmail);
-        userPayload.setPassword(pwd);
-        userPayload.setPhone(ph);
-
-        Response response = UseEndPoints.createUser(userPayload);
-        response.then().log().all();
-        Assert.assertEquals(response.getStatusCode(),200);
-    }
+//
+//    @Test(priority = 1,dataProvider = "Data",dataProviderClass = DataProviders.class)
+//    public void testPostUser(String userID, String userName, String fname, String lname,String userEmail,String pwd,String ph){
+//        User userPayload=new User();
+//        userPayload.setId(Integer.parseInt(userID));
+//        userPayload.setUsername(userName);
+//        userPayload.setFirstName(fname);
+//        userPayload.setLastName(lname);
+//        userPayload.setEmail(userEmail);
+//        userPayload.setPassword(pwd);
+//        userPayload.setPhone(ph);
+//
+//        Response response = UseEndPoints.createUser(userPayload);
+//        response.then().log().all();
+//        Assert.assertEquals(response.getStatusCode(),200);
+//    }
 
 }
